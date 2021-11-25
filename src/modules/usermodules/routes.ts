@@ -21,3 +21,12 @@ class Routes {
         }
 }
 export default Routes;
+ private configureRoutes(){
+        this.app.route(`${this.rootPath}/`)
+        .post((request: Request, response: Response) => {
+           this.userController.create(request, response);
+        });
+        this.app.route(`${this.rootPath}/`)
+        .get((request: Request, response: Response) => {
+            this.userController.get(request, response);
+         });
