@@ -1,4 +1,11 @@
 import { Mongoose, Schema, Document } from "mongoose";
+export interface IUser {
+    name?: string;
+    email?: string;
+    password?: string;
+    createAT?: Date;
+    updateAt?: Date;
+}kk
 export interface User extends Document {
     name: string;
     email: string;
